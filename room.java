@@ -1,7 +1,9 @@
-/*Devon Smith
-Exercize "room 3D"
+/*
+Devon Smith
+CIS110
+Room (3D)
 This program will ask the user to input the three dimentions of a room. 
-The inputs will be saved to variables. With those inputs, the program will caclulate the area and perimiter of the room. area, by multiplying the length * width * hight and the perimeter by adding the length + width  + height. It will also calculate the rooms surface area and volume.
+The inputs will be saved to variables. With those inputs, the program will caclulate the area and perimeter of the room. area, by multiplying the length * width * hight and the perimeter by adding the length + width  + height. It will also calculate the room's surface area and volume.
 It will then print out the area and the perimeter, surface area, volume-- to the screen for the user to view.
 */
 
