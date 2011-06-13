@@ -28,7 +28,7 @@ public class customers
 		
 		//beginning balance
 		System.out.println("Enter your beginning balance for the month:  ");
-		begBal = sc.nextInt();
+		begBal = sc.nextDouble();
 		
 		//credit limit
 		System.out.println("Enter your account's credit limit:  ");
