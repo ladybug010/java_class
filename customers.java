@@ -1,9 +1,9 @@
 /*
 Devon Smith
 Assignemnt "Customers Program"
-This program will calculate the ending monthly balance for an account at the Java Departmetn store.
+This program will calculate the ending monthly balance for an account at the "Java Department Store."
 It will collect information from the account holder including the account number, the account's beginning balance, the charges and credits to the account and the available credit limit.
-It will then use those values to determine the ending balance and remaining credit availale to the account holder.
+It will then use those values to determine the ending balance and remaining credit available to the account holder.
 If the account holder has gone over the monthly budget, it will issue a warning to them.
 */
 
@@ -15,7 +15,7 @@ public class customers
 	{
 		//declare variables
 		int accNum;
-		double begBal, charges, credits, creditLimit, endBal, remainCredit;
+		double begBal, charges, credits, creditLimit, endBal, remainCredit, overlimit;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -39,23 +39,30 @@ public class customers
 		charges = sc.nextDouble();
 	
 		//credits/payements
-		System.out.println("Enter ammount of any payments/credits made this month:  ");
+		System.out.println("Enter amount of any payments/credits made this month:  ");
 		credits = sc.nextDouble();
 		
 		//calculate ending balance
 		endBal = begBal + (charges - credits);
 		
 		//output account # and ending balance
-		System.out.printf("The ending balance for account %d is %.2f\n\r", accNum, endBal);
+		System.out.printf("The ending balance for account $%d is %.2f\n\r", accNum, endBal);
 		
 		//if ending balance > credit limit, output credit limit and tell them they have exceeded it.
 		if (endBal > creditLimit)
-		  System.out.printf("You have exceeded your credit limit of %.2\n\r", creditLimit);
+		{
+		  overlimit = endBal - creditLimit;
+		  System.out.printf("You have exceeded your credit limit by $%.2f!\n\r" , overlimit);
+		  System.out.printf("Your Credit limit was: $%.2f\n\r", creditLimit);
+		}
+		
 		//otherwise calcualte and print available credit
+	
 		else
 		{
 			remainCredit = creditLimit - endBal;
-			System.out.printf("The remaining credit for the account is %.2f\n", remainCredit);
+			System.out.printf("The remaining credit for the account is $%.2f\n", remainCredit);
 		}
+		
 	}
 }
