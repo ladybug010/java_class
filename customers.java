@@ -45,7 +45,7 @@ public class customers
 		//calculate ending balance
 		endBal = begBal + (charges - credits);
 		
-		//output account # and ending balance
+		/ /output account # and ending balance
 		System.out.printf("The ending balance for account $%d is %.2f\n\r", accNum, endBal);
 		
 		//if ending balance > credit limit, output credit limit and tell them they have exceeded it.
