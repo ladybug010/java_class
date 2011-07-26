@@ -11,19 +11,19 @@ public class year
 	public static void main(String[] args)
 	{
 		//declare variables for main
-		int month, day, year;
+		int day, year;
 		long longDate;
-		String dateStr;
+		String dateStr, month;
 		Scanner sc = new Scanner(System.in);
 		
 		//open dialogue box to prompt for date input
-		dateStr = JOptionPane.showInputDialog("Enter the Date (format: mm dd yyyy): ");
+		dateStr = JOptionPane.showInputDialog("null, Enter the Date (format: mm dd yyyy): ");
 		//save date as variables
-		month = sc.nextInt();
+		month = sc.nextLine();
 		day = sc.nextInt();
 		year = sc.nextInt();
 	    
-	    System.out.print("year is " + year);
+	    System.out.print("month is " + month);
 		
 		//print out the long date
 		
@@ -37,11 +37,14 @@ public class year
 		  System.out.print(year + " is not a leap year.");
 	}
 	
-	public static long convertdays(int m, int d, int y)
+	public static long convertdays(String m, int d, int y)
 	{
 		long longM, longY, longFinal;
+		int intM;
+		
+		intM = (int)m;
 	    
-	    longM = m * 100;
+	    longM = intM * 100;
 	    longY = y * 10000;
 	    longFinal = longM + d +longY;
 	    System.out.print("in convert days");
